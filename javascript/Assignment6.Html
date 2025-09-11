@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>My Website</title>
+    <style>
+        #logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
 
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #counter {
+            font-size: 40px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 24px;
+            margin: 10px;
+            padding: 10px 20px;
+        }
+
+        /* Card styling */
+        .card {
+            background: #ebd1d1;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            margin: 50px auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Card -->
+     
+    <div class="card">
+        <div class="header">
+            <img id="logo" src="bus.jpg" alt="My Website Logo">
+            <h1>Counter App</h1>
+        </div>
+
+        <div id="counter">0</div>
+
+        <div class="footer">
+            <button onclick="increment()">+</button>
+            <button onclick="decrement()">-</button>
+        </div>
+    </div>
+
+    <script>
+        var count = 0;
+        function increment() {
+            count++;
+            document.getElementById("counter").innerText = count;
+
+            if (count > 10) {
+                alert("Counter is more than 10");
+            }
+        }
+        function decrement() {
+            count--;
+            document.getElementById("counter").innerText = count;
+
+            if (count < 0) {
+                alert("Counter is negative");
+            }
+        }
+
+    </script>
 </body>
 </html>
