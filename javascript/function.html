@@ -2,11 +2,28 @@
 <html lang="en">
 <head>
      <title>Document</title>
+     <style>
+        #AK{
+            border:5px solid black;
+            width:300px;    
+            height:100px;
+            background-color: antiquewhite;
+        }
+     </style>
 </head>
 <body>
+    <div id="AK">
+        <button onclick="ad()"> Click</button>
+        <p id="AA"></p>
+    </div>
+
     <!--For using function-->
-    <script>
-        function abes(){
+    <script> 
+        function ad(){
+            document.getElementById("AA").innerHTML="I am from function";
+        }
+    </script>
+        <!-- function abes(){
 
             alert("I am from function");
 
@@ -23,8 +40,8 @@
 
         }
          addition(20,10);
-         subtraction(20,10);
+         subtraction(20,10); -->
 
-    </script>
+    
 </body>
 </html>
