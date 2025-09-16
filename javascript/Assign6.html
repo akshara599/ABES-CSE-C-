@@ -9,30 +9,47 @@
     <script>
         let n1 = Number(prompt("Enter first table no"));
         let n2 = Number(prompt("Enter second table no"));
-    
+        let even=[];
+        let odd=[];
         document.write("<h3>Table of " + n1 + ":</h3>");
-        for (let i = 1; i <= 10; i++) {
-            document.write(n1 * i + "<br>");
+        for (let i=1; i <= 10; i++) {
+            document.write(n1*i+"<br>");
+            if((n1*i)%2===0){
+                even.push(n1*i);
+            }
+            else{
+                odd.push(n1*i);
+            }
         }
         document.write("<h3>Table of " + n2 + ":</h3>");
         for (let i = 1; i <= 10; i++) {
             document.write(n2 * i + "<br>");
+            if((n2*i)%2===0){
+                even.push(n2*i);
+            }
+            else{
+                odd.push(n2*i);
+            }
         }
 
        
-        document.write("<h3>Even Numbers (1 to " + (n2 * 10) + "):</h3>");
-        for (let i = 1; i <= n2 * 10; i++) {
-            if (i % 2 === 0) {
-                document.write(i + "<br>");
-            }
-        }
+        // document.write("<h3>Even Numbers (1 to " + (n2 * 10) + "):</h3>");
+        // for (let i = 1; i <= n2 * 10; i++) {
+        //     if (i % 2 === 0) {
+        //         document.write(i + "<br>");
+        //     }
+        // }
 
-        document.write("<h3>Odd Numbers (1 to " + (n2 * 10) + "):</h3>");
-        for (let i = 1; i <= n2 * 10; i++) {
-            if (i % 2 !== 0) {
-                document.write(i + "<br>");
-            }
-        }
+        // document.write("<h3>Odd Numbers (1 to " + (n2 * 10) + "):</h3>");
+        // for (let i = 1; i <= n2 * 10; i++) {
+        //     if (i % 2 !== 0) {
+        //         document.write(i + "<br>");
+        //     }
+        // }
+        document.write("<h3>Even Numbers:</h3>");
+        document.write(even.join(", ") + "<br>");
+        document.write("<h3>Odd Numbers:</h3>");
+        document.write(odd.join(", ") + "<br>");
     </script>
 </body>
 </html>
