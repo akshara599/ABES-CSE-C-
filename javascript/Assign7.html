@@ -52,40 +52,42 @@
 
 <body>
     <script>
-        const products = {
-            mobile: { brand: "Apple", model: "iPhone 14 Pro", price: "₹120000" },
-            tv: { brand: "Samsung", model: "QLED 4K", price: "₹80000" },
-            speaker: { brand: "JBL", model: "Flip 5", price: "₹7000" }
-        };
+window.onload = () => {
+    const products = {
+        mobile: { brand: "Apple", model: "iPhone 14 Pro", price: "₹120000" },
+        tv: { brand: "Samsung", model: "QLED 4K", price: "₹80000" },
+        speaker: { brand: "JBL", model: "Flip 5", price: "₹7000" }
+    };
 
-    
-        document.getElementById("mobileBtn").onclick =() => {
-            let d = document.querySelector("#mobileBox .details");
-            d.innerHTML = "<b>Brand:</b> " + products.mobile.brand +
-                          "<br><b>Model:</b> " + products.mobile.model +
-                          "<br><b>Price:</b> " + products.mobile.price;
-            d.style.display = d.style.display === "block" ? "none" : "block";
-        };
+    // Mobile
+    document.getElementById("mobileBtn").onclick = () => {
+        let d = document.querySelector("#mobileBox .details");
+        d.innerHTML = "<b>Brand:</b> " + products.mobile.brand +
+                      "<br><b>Model:</b> " + products.mobile.model +
+                      "<br><b>Price:</b> " + products.mobile.price;
+        d.style.display = d.style.display === "block" ? "none" : "block";
+    };
 
-      
-        document.getElementById("tvBtn").onclick = () => {
-            let d = document.querySelector("#tvBox .details");
-            d.innerHTML = "<b>Brand:</b> " + products.tv.brand +
-                          "<br><b>Model:</b> " + products.tv.model +
-                          "<br><b>Price:</b> " + products.tv.price;
-            d.style.display = d.style.display === "block" ? "none" : "block";
-        };
+    // TV
+    document.getElementById("tvBtn").onclick = () => {
+        let d = document.querySelector("#tvBox .details");
+        d.innerHTML = "<b>Brand:</b> " + products.tv.brand +
+                      "<br><b>Model:</b> " + products.tv.model +
+                      "<br><b>Price:</b> " + products.tv.price;
+        d.style.display = d.style.display === "block" ? "none" : "block";
+    };
 
-       
-        document.getElementById("speakerBtn").onclick = () => {
-            let d = document.querySelector("#speakerBox .details");
-            d.innerHTML = "<b>Brand:</b> " + products.speaker.brand +
-                          "<br><b>Model:</b> " + products.speaker.model +
-                          "<br><b>Price:</b> " + products.speaker.price;
-            d.style.display = d.style.display === "block" ? "none" : "block";
-        };
+    // Speaker
+    document.getElementById("speakerBtn").onclick = () => {
+        let d = document.querySelector("#speakerBox .details");
+        d.innerHTML = "<b>Brand:</b> " + products.speaker.brand +
+                      "<br><b>Model:</b> " + products.speaker.model +
+                      "<br><b>Price:</b> " + products.speaker.price;
+        d.style.display = d.style.display === "block" ? "none" : "block";
+    };
+};
+</script>
 
-    </script>
 
 
 
