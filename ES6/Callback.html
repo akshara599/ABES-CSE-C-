@@ -15,7 +15,7 @@
         // cal(5,5,sum);
         function getdata(dataid,getNextData){
             setTimeout(() => {
-                // console.log("Data is fetched",dataid);
+                console.log("Data is fetched",dataid);
                 if(getNextData){
                     getNextData();
                 }
@@ -30,8 +30,6 @@
                 });
             });
         }); 
-        getdata(6);
-        getdata(7);
     </script>
     
 </body>
